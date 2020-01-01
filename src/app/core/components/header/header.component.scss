@@ -1,0 +1,36 @@
+.show_navbar_content, .show_currency_dropdown, .show_language_dropdown{
+    display: block !important;
+}
+
+.navbar{
+    padding: 15px 35px;
+    border-bottom: 1px solid gray;
+}
+
+.navbar-brand{
+    color: orange;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+.right_part_cont{
+    justify-content: flex-end;
+    color: black;
+
+    ul{
+        margin-right: 0 !important;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+a{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 992px){
+    .navbar-collapse{
+        display: none;
+    }
+}

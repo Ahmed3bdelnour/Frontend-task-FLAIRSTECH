@@ -1,0 +1,26 @@
+<!-- loader html -->
+<div class="progress-loader loader" [hidden]="!showLoader">
+    <div class="spinner-border text-info spinner_elem" role="status">
+    </div>
+</div>
+
+<!-- header of application -->
+<div class="header_cont">
+    <app-header></app-header>
+</div>
+
+
+
+
+<div class="outlet_cont">
+    <!-- alerts html code -->
+    <div class="container">
+        <p class="err-msg" *ngFor="let alert of alerts">
+            <ngb-alert [type]="alert.type" (close)="close(alert)">{{ alert.message }}</ngb-alert>
+        </p>
+    </div>
+    <router-outlet></router-outlet>
+</div>
+
+<!-- application footer -->
+<app-footer></app-footer>

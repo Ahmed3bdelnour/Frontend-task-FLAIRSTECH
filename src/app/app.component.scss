@@ -1,0 +1,32 @@
+.loader{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1500;
+    background: rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .spinner_elem{
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.err-msg{
+    padding-top: 35px;
+}
+
+.header_cont{
+    position: fixed;
+    width: 100%;
+    background: white;
+    top: 0;
+    z-index: 999;
+}
+
+.outlet_cont{
+    margin-top: 71px;
+}

@@ -1,0 +1,87 @@
+.details_row{
+    color: white;
+    font-size: 16px;
+    font-weight: normal;
+
+    p{
+        margin: 0;
+    }
+
+    .padding_t_b{
+        padding: 15px;
+    }
+
+    .user_name{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        p{
+            font-weight: bold;
+            letter-spacing: 1px;    
+        }
+    }
+
+    .user_email_phone{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;        
+        justify-content: center;
+
+        padding: 0px 15px;
+        border-right: 1px solid white;
+        border-left: 1px solid white;
+        
+        .email{
+
+        }
+        .phone{
+
+        }
+    }
+
+    .address{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;        
+        justify-content: center;
+        
+        .title{
+
+        }
+
+        .address_details{
+
+        }
+    }
+}
+
+.albums_or_photos{
+    padding: 20px 30px 30px 30px
+}
+
+.no-data{
+    text-align: center;
+    padding: 20px;
+}
+    
+
+@media screen and (max-width: 768px){
+    .user_name{
+        align-items: flex-start !important;
+    }
+    .user_email_phone{
+        border-right: none !important;
+        border-left: none !important;   
+    }
+
+    .border_t_b{
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+}
+

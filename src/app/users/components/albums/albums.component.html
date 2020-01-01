@@ -1,0 +1,15 @@
+<!-- showing albums of specific user -->
+<p class="albums_title">{{user.name + "'s Albums"}}</p>
+<div class="albums_cont">
+    <div class="album" *ngFor="let album of albums; let i = index">
+        <div class="album_inner_body"  [routerLink]="['/user', user.id, 'album', album.id]">
+            <div class="name bg-danger">
+                {{album.title}}
+            </div>
+            <div class="photos_no">
+                <p class="number">{{10}}</p>
+                <p class="text_photos">Photos</p>
+            </div>
+        </div>
+    </div>
+</div>

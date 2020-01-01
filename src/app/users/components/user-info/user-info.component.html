@@ -1,0 +1,37 @@
+<div *ngIf="user">
+
+    <!-- user details -->
+    <div class="bg-primary details_row">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 padding_t_b">
+                    <div class="user_name">
+                        <p>{{user.name}}</p>
+                    </div>
+                </div>
+                <div class="col-md-4 padding_t_b border_t_b">
+                    <div class="user_email_phone">
+                        <p class="email">{{user.email}}</p>
+                        <p class="phone">{{user.phone}}</p>
+                    </div>
+                </div>
+                <div class="col-md-4 padding_t_b ">
+                    <div class="address">
+                        <p class="title">Address</p>
+                        <p class="address_details">{{user.address.suite + ', ' + user.address.street }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- show albums or photos by nested routes -->
+    <div class="albums_or_photos">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<div *ngIf="!user" class="no-data">
+    Sorry, no user data to show for this user as it is not persistant to DB,
+    please select a nother user coming from the api not added on the fly
+</div>

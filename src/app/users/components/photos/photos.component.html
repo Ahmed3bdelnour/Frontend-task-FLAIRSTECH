@@ -1,0 +1,9 @@
+<!-- album photos -->
+<p class="photos_title">Photos</p>
+<div class="photos_cont">
+    <div class="photo" *ngFor="let photo of photos; let i = index">
+        <div class="photo_inner_body">
+            <img [src]="photo.url" [alt]="photo.title">
+        </div>
+    </div>
+</div>

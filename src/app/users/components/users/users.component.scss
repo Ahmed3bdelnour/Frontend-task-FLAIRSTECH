@@ -1,0 +1,46 @@
+table {
+    width: 100%;
+}
+
+.square_box{
+    width: 10px;
+    height: 10px;
+    background: gray;
+    display: inline-block;
+    margin-inline-end: 30px;
+}
+
+.add_user_row{
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .users_text{
+       color: white;
+       font-size: 18px;
+       font-weight: normal;
+       letter-spacing: 1px;
+    }
+
+    .add_user_btn{
+        color: #007bff;
+        background: white;
+        border-radius: 0;
+        padding: 5px 35px;
+    }
+
+}
+
+.user_name{
+    font-weight: bold;
+}
+.select_col{
+    padding: 18px 15px !important
+}
+
+td{
+    cursor: pointer;
+}
+
+

@@ -1,0 +1,47 @@
+.modal_body{
+    position: relative;
+    .close_btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 50%;
+        border: 1px solid gray;
+        font-size: 30px;
+        padding: 0;
+        width: 45px;
+        height: 45px;
+        outline: none;
+    }
+
+    .form_title{
+      color: orange;
+      font-size: 18px;
+      font-weight: normal;
+      text-align: center;  
+    }
+    
+    .save_btn_cont{
+        margin-bottom: 0;
+        text-align: center;
+        .save_btn{
+            padding: 8px 30px;
+            margin: auto;
+            border-radius: 0;
+            outline: none;
+            width: 175px;
+        }
+    }
+    
+
+    .text_bottom{
+        padding-top: 30px;
+    }
+}
+
+.err-msg{
+    color: red;
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}

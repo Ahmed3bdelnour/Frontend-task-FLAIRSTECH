@@ -1,0 +1,73 @@
+<div class="modal_body">
+
+  <p class="form_title">User Information</p>
+  <!-- button close -->
+  <button class="btn close_btn" (click)="closeModal()"> &times; </button>
+
+  <!-- add user form  -->
+  <form [formGroup]="addUserForm" (ngSubmit)="addUserHandler()">
+
+    <div class="form-row">
+
+      <div class="form-group col-md-6">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="enter your name" formControlName="name">
+        <div class="err-msg" *ngIf="addUserForm.get('name').touched && addUserForm.get('name').invalid">
+          {{getRequiredFeildsErrMsg(addUserForm.get('name'), 'Name')}}
+        </div>
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="address">Email Address</label>
+        <input type="text" class="form-control" id="address" placeholder="enter your email" formControlName="email">
+        <div class="err-msg" *ngIf="addUserForm.get('email').touched && addUserForm.get('email').invalid">
+          {{getErrorMsgForEmailOrPhone(addUserForm.get('email'), 'email')}}
+        </div>
+      </div>
+
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="phone">Phone</label>
+        <input type="text" class="form-control" id="phone" placeholder="enter your phone" formControlName="phone">
+        <div class="err-msg" *ngIf="addUserForm.get('phone').touched && addUserForm.get('phone').invalid">
+          {{getErrorMsgForEmailOrPhone(addUserForm.get('phone'), 'phone')}}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row" formGroupName="address">
+      <div class="form-group col-md-4">
+        <label for="city">Address</label>
+        <ng-select [items]="cities" bindLabel="name" bindValue="name" labelForId="city" placeholder="City"
+          formControlName="city">
+        </ng-select>
+
+        <div class="err-msg" *ngIf="addUserForm.get('address.city').touched && addUserForm.get('address.city').invalid">
+          {{getRequiredFeildsErrMsg(addUserForm.get('address.city'), 'City')}}
+        </div>
+      </div>
+      <div class="form-group col-md-4 text_bottom">
+        <input type="text" class="form-control" placeholder="street" formControlName="street">
+        <div class="err-msg"
+          *ngIf="addUserForm.get('address.street').touched && addUserForm.get('address.street').invalid">
+          {{getRequiredFeildsErrMsg(addUserForm.get('address.street'), 'Street')}}
+        </div>
+      </div>
+      <div class="form-group col-md-4 text_bottom">
+        <input type="text" class="form-control" placeholder="- " formControlName="suite">
+        <div class="err-msg"
+          *ngIf="addUserForm.get('address.suite').touched && addUserForm.get('address.suite').invalid">
+          {{getRequiredFeildsErrMsg(addUserForm.get('address.suite'), 'Suite')}}
+        </div>
+      </div>
+    </div>
+
+    <div class="save_btn_cont">
+      <button type="submit" class="btn btn-primary save_btn" [disabled]="addUserForm.invalid">Save</button>
+    </div>
+  </form>
+
+
+</div>

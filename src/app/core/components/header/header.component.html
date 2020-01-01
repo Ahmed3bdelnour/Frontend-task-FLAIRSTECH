@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" routerLink="/">Logo</a>
+    <button (click)="toggleNavbar()" class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div  class="navbar-collapse right_part_cont" [ngClass]="{'show_navbar_content':showNavBarContent}">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link">Packages</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">Offers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">Contact us</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                    (click)="toggleCurrencyDropdown()">
+                    Currecy ($)
+                </a>
+                <div class="dropdown-menu" [ngClass]="{'show_currency_dropdown':showCurrencyDropdown}">
+                    <a class="dropdown-item">US</a>
+                    <a class="dropdown-item">EGP</a>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                    (click)="toggleLanguageDropdown()">
+                    Language
+                </a>
+                <div class="dropdown-menu" [ngClass]="{'show_language_dropdown':showLanguageDropdown}">
+                    <a class="dropdown-item">En</a>
+                    <a class="dropdown-item">Ar</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link">Sign in</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">Sign up</a>
+            </li>
+        </ul>
+    </div>
+</nav>
